@@ -3,6 +3,15 @@
 
 body {
 	overflow-x: hidden;
+	color: @brand-primary;
+}
+
+section {
+	background-color: @brand-tan;
+}
+
+.navbar-default {
+	background-color: @brand-primary;
 }
 
 p {
@@ -40,7 +49,7 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "\f0ac";
     font-family: FontAwesome;
     display: inline-block;
     position: relative; 
@@ -63,7 +72,7 @@ hr.star-primary {
 }
 
 hr.star-primary:after {
-    background-color: white;
+    background-color: @brand-tan;
     color: @brand-primary;
 }
 
@@ -323,6 +332,14 @@ footer {
 	.footer-below {
 		padding: 25px 0;
 		background-color: darken(@brand-primary, 5%);
+		i {
+			cursor: pointer;
+			margin: 0px 20px;
+			color: white;
+			&:hover {
+				color: @brand-success;
+			}
+		}
 	}
 }
 
@@ -422,4 +439,10 @@ footer {
     	opacity: 0;
     	display: none;
     }
+}
+
+li.active {
+	a {
+		background-color: darken(@brand-primary, 10%) !important;
+	}	
 }
